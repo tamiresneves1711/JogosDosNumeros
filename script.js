@@ -55,4 +55,4 @@ async function iniciarjogo(){
     });
 }
 
-window.onload =iniciarjogo
+window.onload =iniciarjogo;
