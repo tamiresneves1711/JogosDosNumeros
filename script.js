@@ -42,8 +42,17 @@ async function iniciarjogo(){
 
             inputPalpite.value= "";
 
+            if(mensagem.includes("acertou")){
+                tentativas =0;
+                resultado.textContent += "  o jogo será reiniciado"
+                await gerarNumeroAleatorio();
+                tentativasDisplay.textContent = "";
+            }
+
         } catch (erro) {
             resultado.textContent = erro;
         }
     });
 }
+
+window.onload =iniciarjogo
