@@ -11,7 +11,7 @@ body{
     border: 1px solid #21ec43;
     background: red;
     border-radius: 5px;
-    box-shadow: 0 2px 10px #00010e;
+    box-shadow: 0 2px 10px rgba(rgb(14, 101, 128), rgb(1, 49, 71), rgb(1, 40, 49), alpha);
 
     
 }
