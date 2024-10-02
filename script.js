@@ -31,5 +31,19 @@ async function iniciarjogo(){
     const botaoEnviar = document.getElementById("enviar");
     const inputPalpite = document.getElementById("palpite");
     const resultado = document.getElementById("resultado");
-    const tentativasDisplay = document.getElementById("tentativas")
+    const tentativasDisplay = document.getElementById("tentativas");
+
+    botaoEnviar.addEventListener("click", async() => {
+        try {
+            const palpite = parseInt(inputPalpite.value);
+            const mensagem = await verificarPalpite(palpite);
+            resultado.textContent = mensagem;
+            tentativasDisplay.textContent = `Tentativas: ${tentativas}`;
+
+            inputPalpite.value= "";
+
+        } catch (erro) {
+            resultado.textContent = erro;
+        }
+    });
 }
